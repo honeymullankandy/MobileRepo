@@ -1,0 +1,43 @@
+trigger:
+  - master
+
+pool: Default
+variables:
+  NODE_VERSION: '18.x'  # Specify the Node.js version you need
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '$(NODE_VERSION)'
+    displayName: 'Install Node.js'
+
+  - powershell: |
+      if (!(Test-Path -Path "$(System.DefaultWorkingDirectory)\test-results")) {
+          New-Item -ItemType Directory -Path "$(System.DefaultWorkingDirectory)\test-results" | Out-Null
+      }
+    displayName: 'Ensure test-results Directory Exists'
+
+  - script: |
+      echo "Listing test-results folder contents:"
+      dir "$(System.DefaultWorkingDirectory)\test-results"
+    displayName: 'List test-results Directory'
+
+  - script: |
+      npm install
+    displayName: 'Install NPM Dependencies'
+
+  - script: |
+      npx wdio run wdio.conf.js
+    env:
+      BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
+      BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
+    displayName: 'Run WebdriverIO Tests'
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFiles: 'D:\agent\_work\3\s\test-results'
+      testResultsFormat: 'JUnit'
+      searchFolder: '$(System.DefaultWorkingDirectory)'
+      testRunTitle: 'WebdriverIO JUnit Tests'
+    condition: succeededOrFailed()
+    displayName: 'Publish Test Results'
