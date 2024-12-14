@@ -27,7 +27,7 @@ Before setting up the project, ensure you have the following installed:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/honeymullankandy/APIAutomation.git
+git clone https://github.com/honeymullankandy/MobileRepo.git
 cd APIAutomation
 npx wdio  this will excute the test case
 npx allure open
