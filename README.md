@@ -28,6 +28,6 @@ First, clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/honeymullankandy/MobileRepo.git
-cd APIAutomation
+cd  project folder
 npx wdio  this will excute the test case
 npx allure open
