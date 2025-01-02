@@ -26,14 +26,14 @@
         
         it('4 edge cases to validate the cancel button in date',async()=>{
         await($('~Pick a Date')).click();
-        await($('//android.widget.Button[contains(@content-desc,"14, Saturday")]')).click();
+        await($('//android.widget.Button[contains(@content-desc,"10")]')).click();
         await($('//android.widget.Button[@content-desc="Cancel"]')).click();
         await expect(await $('//android.view.View[@content-desc="Selected"]')).not.toBeDisplayed('No "Selected" element should be displayed after canceling the date selection');
         });
     
         it('5 validate allow selecting a date and validate selected elements', async () => {
             await $('~Pick a Date').click();
-            await $('//android.widget.Button[contains(@content-desc,"14, Saturday")]').click();
+            await $('//android.widget.Button[contains(@content-desc,"10")]').click();
             await $('//android.widget.Button[@content-desc="OK"]').click();
     
             await expect($$('//android.view.View[@content-desc="Selected"]'))
