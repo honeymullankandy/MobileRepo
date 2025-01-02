@@ -54,19 +54,19 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    // capabilities: [{
-    //     platformName:'android',
-    //    'appium:platformVersion': '14.0',
-    //    'appium:deviceName':'Google Pixel 8',  
-    //   'appium:automationName': 'UiAutomator2',
-    //   'appium:app': 'bs://14d6c803a04b82803ba115da7fdbff0c335949b9'}],
+    capabilities: [{
+        platformName:'android',
+       'appium:platformVersion': '14.0',
+       'appium:deviceName':'Google Pixel 8',  
+      'appium:automationName': 'UiAutomator2',
+      'appium:app': 'bs://14d6c803a04b82803ba115da7fdbff0c335949b9'}],
    
-     capabilities: [{
-        'appium:platformName':'android',
-        'appium:platformVersion': '14.0',  
-        'appium:deviceName':'hm',
-        'appium:automationName': 'UiAutomator2',
-        'appium:app': path.join(process.cwd(),'android\\app-release.apk')}],
+    //  capabilities: [{
+    //     'appium:platformName':'android',
+    //     'appium:platformVersion': '14.0',  
+    //     'appium:deviceName':'hm',
+    //     'appium:automationName': 'UiAutomator2',
+    //     'appium:app': path.join(process.cwd(),'android\\app-release.apk')}],
 
 
 
@@ -117,8 +117,8 @@ export const config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-     services: ['appium'],
- // services: ['browserstack'],
+  //   services: ['appium'],
+  services: ['browserstack'],
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -291,31 +291,31 @@ export const config = {
      * @param {object} exitCode 0 - success, 1 - fail
      * @param {object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
-     * @param {<Object>} results object containing test results
-     */
-    //  onComplete: function(exitCode, config, capabilities, results) {
-    //     const reportError = new Error('Could not generate Allure report')
-    //     const generation = allure(['generate', 'allure-results', '--clean'])
-    //     return new Promise((resolve, reject) => {
-    //         const generationTimeout = setTimeout(
-    //             () => reject(reportError),
-    //             5000)
+     * @param {<Object>} results object containing test results*/
+     
+     onComplete: function(exitCode, config, capabilities, results) {
+        const reportError = new Error('Could not generate Allure report')
+        const generation = allure(['generate', 'allure-results', '--clean'])
+        return new Promise((resolve, reject) => {
+            const generationTimeout = setTimeout(
+                () => reject(reportError),
+                5000)
 
-    //         generation.on('exit', function(exitCode) {
-    //             clearTimeout(generationTimeout)
+            generation.on('exit', function(exitCode) {
+                clearTimeout(generationTimeout)
 
-    //             if (exitCode !== 0) {
-    //                 return reject(reportError)
-    //             }
+                if (exitCode !== 0) {
+                    return reject(reportError)
+                }
 
-    //             console.log('Allure report successfully generated')
-    //             resolve()
-    //         })
-    //     })
+                console.log('Allure report successfully generated')
+                resolve()
+            })
+        })
         
-    //  },
-    /**
-    * Gets executed when a refresh happens.
+     },
+    
+ /*   * Gets executed when a refresh happens.
     * @param {string} oldSessionId session ID of the old session
     * @param {string} newSessionId session ID of the new session
     */
@@ -347,5 +347,10 @@ export const config = {
             }
         }]
     ],
+      reporters: ['spec',['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+    }]],
       
 }
