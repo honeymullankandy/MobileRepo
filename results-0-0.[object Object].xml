@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="2" errors="0" skipped="0">
+  <testsuite name="Mobile App Validation Tests" timestamp="2025-01-01T20:50:54" time="26.995" tests="5" failures="2" errors="0" skipped="0">
+    <properties>
+      <property name="specId" value="0"/>
+      <property name="suiteName" value="Mobile App Validation Tests"/>
+      <property name="capabilities" value="android.37201fdjh00en6"/>
+      <property name="file" value="file:///D:/xnity/WebdriverIO/test/specs/testcase.spec.js"/>
+    </properties>
+    <testcase classname="android.37201fdjh00en6.Mobile_App_Validation_Tests" name="1 validate the initial value is 0" time="0.493">
+      <system-out><![CDATA[
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+RESULT: {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/execute/sync - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: GET /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/80bf9b24-0b9a-4f41-b400-863fdd707c60/attribute/content-desc - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.37201fdjh00en6.Mobile_App_Validation_Tests" name="2 validate increment the value to 1 after clicking 1" time="1.173">
+      <system-out><![CDATA[
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+RESULT: {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/execute/sync - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.widget.Button[@content-desc=\"+1\"]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[@content-desc=\"+1\"]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/ece36dfe-2218-41dd-ac61-cc7f94016aa7/click - {}
+RESULT: {}
+COMMAND: GET /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/df97296c-91d8-4ac4-97df-bdacb2337cfd/attribute/content-desc - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.37201fdjh00en6.Mobile_App_Validation_Tests" name="3 validate reset the value to 0 after clicking Reset" time="1.638">
+      <system-out><![CDATA[
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+RESULT: {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/execute/sync - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"accessibility id","value":"Reset"}
+RESULT: {"using":"accessibility id","value":"Reset"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/ee890a88-7238-4f0a-8037-ed0265e9c022/click - {}
+RESULT: {}
+COMMAND: GET /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/42a8baa8-8f70-41eb-983b-bcfe609c9f31/attribute/content-desc - {}
+RESULT: {}
+]]></system-out>
+    </testcase>
+    <testcase classname="android.37201fdjh00en6.Mobile_App_Validation_Tests" name="4 edge cases to validate the cancel button in date" time="12.215">
+      <failure message="Can't call click on element with selector &quot;//android.widget.Button[contains(@content-desc,&quot;14, Saturday&quot;)]&quot; because element wasn't found"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+RESULT: {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/execute/sync - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element/7b422632-9219-48d0-81e6-4961a49546b3/click - {}
+RESULT: {}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+RESULT: {"using":"xpath","value":"//android.widget.Button[contains(@content-desc,\"14, Saturday\")]"}
+COMMAND: GET /session/bf656b7c9a1262948903efb1429e45a1da438b63/screenshot - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: Can't call click on element with selector "//android.widget.Button[contains(@content-desc,"14, Saturday")]" because element wasn't found
+    at implicitWait (D:\xnity\WebdriverIO\node_modules\webdriverio\build\index.js:49:13)
+    at async Element.elementErrorHandlerCallbackFn (D:\xnity\WebdriverIO\node_modules\webdriverio\build\index.js:6691:23)
+    at async Element.wrapCommandFn (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1380:23)
+    at async Context.<anonymous> (file:///D:/xnity/WebdriverIO/test/specs/testcase.spec.js:29:9)
+    at async Context.executeAsync (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1500:20)
+    at async Context.testFrameworkFnWrapper (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1571:14)
+]]></system-err>
+    </testcase>
+    <testcase classname="android.37201fdjh00en6.Mobile_App_Validation_Tests" name="5 validate allow selecting a date and validate selected elements" time="11.472">
+      <failure message="Can't call click on element with selector &quot;~Pick a Date&quot; because element wasn't found"/>
+      <system-out><![CDATA[
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+RESULT: {"using":"xpath","value":"//android.view.View[@content-desc=\"Current Value:\"]/following-sibling::*[1]"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/execute/sync - {"script":"<script> [20 bytes]","args":[]}
+RESULT: {"script":"<script> [20 bytes]","args":[]}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/element - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: POST /session/bf656b7c9a1262948903efb1429e45a1da438b63/elements - {"using":"accessibility id","value":"Pick a Date"}
+RESULT: {"using":"accessibility id","value":"Pick a Date"}
+COMMAND: GET /session/bf656b7c9a1262948903efb1429e45a1da438b63/screenshot - {}
+RESULT: {}
+COMMAND: DELETE /session/bf656b7c9a1262948903efb1429e45a1da438b63 - {}
+RESULT: {}
+]]></system-out>
+      <system-err><![CDATA[
+Error: Can't call click on element with selector "~Pick a Date" because element wasn't found
+    at implicitWait (D:\xnity\WebdriverIO\node_modules\webdriverio\build\index.js:49:13)
+    at async Element.elementErrorHandlerCallbackFn (D:\xnity\WebdriverIO\node_modules\webdriverio\build\index.js:6691:23)
+    at async Element.wrapCommandFn (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1380:23)
+    at async Context.<anonymous> (file:///D:/xnity/WebdriverIO/test/specs/testcase.spec.js:35:13)
+    at async Context.executeAsync (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1500:20)
+    at async Context.testFrameworkFnWrapper (D:\xnity\WebdriverIO\node_modules\@wdio\utils\build\index.js:1571:14)
+]]></system-err>
+    </testcase>
+  </testsuite>
+</testsuites>
